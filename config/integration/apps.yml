@@ -49,6 +49,13 @@ openai:
         'validation': 'required',
       },
     ]
+fastn:
+  id: fastn
+  logo: fastn.png
+  i18n_key: fastn
+  hook_type: account
+  allow_multiple_hooks: false
+  visible_properties: []
 stripe:
   id: stripe
   logo: stripe.svg

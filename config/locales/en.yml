@@ -509,6 +509,10 @@ en:
     online:
       delete: '%{contact_name} is Online, please try again later'
   integration_apps:
+    fastn:
+      name: 'Integrations by fastn'
+      short_description: 'Connect Slack, Microsoft Teams, HubSpot and more.'
+      description: 'Turn on integrations with the tools your team already uses: post new conversations to Slack or Microsoft Teams, and create new contacts in HubSpot or Salesforce.'
     stripe:
       name: 'Stripe'
       short_description: 'View customer billing details in conversations.'

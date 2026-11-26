@@ -1,4 +1,13 @@
 {
+  "FASTN_INTEGRATION": {
+    "TITLE": "Integrations by fastn",
+    "DESCRIPTION": "Connect the tools your team uses. Each integration you turn on here runs for this account only: new conversations can go to Slack or Microsoft Teams, and new contacts can be created in HubSpot or Salesforce.",
+    "LOADING": "Loading your integrations...",
+    "ERROR": "Your integrations could not be loaded. Try again in a moment.",
+    "NOT_CONFIGURED": "fastn is not set up on this Chatwoot installation. Ask your administrator to add FASTN_API_KEY.",
+    "RETRY": "Try again",
+    "FRAME_TITLE": "fastn integrations"
+  },
   "STRIPE_INTEGRATION": {
     "UNAVAILABLE": "Stripe is unavailable for this account. Contact your administrator to check the integration configuration.",
     "TITLE": "Stripe",

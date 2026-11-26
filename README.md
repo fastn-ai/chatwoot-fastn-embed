@@ -1,3 +1,5 @@
+> **This fork embeds [fastn](https://fastn.ai).** Every Chatwoot account connects its own Slack, Microsoft Teams, HubSpot or Salesforce on Settings → Integrations → Integrations by fastn, and Chatwoot sends its events to fastn, which runs that account's integrations. See **[FASTN_EMBED.md](FASTN_EMBED.md)** for how it works and how to run it. Upstream: [chatwoot/chatwoot](https://github.com/chatwoot/chatwoot).
+
 <img src="./.github/screenshots/header.png#gh-light-mode-only" width="100%" alt="Header light mode"/>
 <img src="./.github/screenshots/header-dark.png#gh-dark-mode-only" width="100%" alt="Header dark mode"/>
 

@@ -489,6 +489,9 @@ Rails.application.routes.draw do
                 get :orders
               end
             end
+            resource :fastn, controller: 'fastn', only: [] do
+              post :embed_session
+            end
             resource :linear, controller: 'linear', only: [] do
               collection do
                 delete :destroy

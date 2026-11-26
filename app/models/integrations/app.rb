@@ -71,8 +71,13 @@ class Integrations::App
     when 'notion'
       notion_enabled?(account)
     else
-      true
+      active_without_account_setup?
     end
+  end
+
+  # Apps with no per-account switch are always listed; fastn is listed once its API key is set.
+  def active_without_account_setup?
+    params[:id] != 'fastn' || Fastn::Client.configured?
   end
 
   def build_linear_action
@@ -96,6 +101,8 @@ class Integrations::App
       account.dashboard_apps.exists?
     when 'shopify', 'stripe'
       account.hooks.exists?(app_id: id, status: :enabled)
+    when 'fastn'
+      Fastn::Client.configured?
     else
       account.hooks.exists?(app_id: id)
     end
