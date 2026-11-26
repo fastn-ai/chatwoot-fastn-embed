@@ -1,0 +1,18 @@
+# Local-only fixes for Chatwoot's dev compose.
+# - Postgres: the stock file starts it with an empty password; give it one that matches .env.
+# - Vite: the stock file sets VITE_DEV_SERVER_HOST, which nothing reads. Vite Ruby reads
+#   VITE_RUBY_HOST, so without this the dev server binds to localhost inside its container,
+#   Rails cannot reach it, falls back to building the whole frontend itself and runs out of memory.
+# - Vite: Rails proxies /vite-dev to the dev server with Host "vite", which Vite 6's host check
+#   refuses with 403 ("This host is not allowed"), leaving the dashboard blank.
+services:
+  postgres:
+    environment:
+      - POSTGRES_PASSWORD=chatwoot
+  vite:
+    environment:
+      - VITE_RUBY_HOST=0.0.0.0
+      - __VITE_ADDITIONAL_SERVER_ALLOWED_HOSTS=vite
+  rails:
+    environment:
+      - VITE_RUBY_HOST=vite
