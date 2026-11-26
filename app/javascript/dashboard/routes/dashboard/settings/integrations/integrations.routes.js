@@ -9,6 +9,7 @@ import DashboardApps from './DashboardApps/Index.vue';
 import Slack from './Slack.vue';
 import Linear from './Linear.vue';
 import Stripe from './Stripe.vue';
+import Fastn from './Fastn.vue';
 import Notion from './Notion.vue';
 import Shopify from './Shopify.vue';
 import GoogleTranslate from './GoogleTranslate.vue';
@@ -100,6 +101,14 @@ export default {
           path: 'stripe',
           name: 'settings_integrations_stripe',
           component: Stripe,
+          meta: {
+            permissions: ['administrator'],
+          },
+        },
+        {
+          path: 'fastn',
+          name: 'settings_integrations_fastn',
+          component: Fastn,
           meta: {
             permissions: ['administrator'],
           },
